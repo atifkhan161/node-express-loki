@@ -7,8 +7,6 @@ View : https://atifkhan161.github.io/node-express-loki/
 Getting Started
 ---------------
 
-The easiest way to get started is to clone the repository:
-
 ```bash
 # Install NPM dependencies
 npm install
