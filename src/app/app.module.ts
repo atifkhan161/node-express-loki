@@ -5,6 +5,7 @@ import { AppComponent }  from './app.component';
 import {AppRoutingModule} from './app-routing.module'
 import {DashboardComponent} from './modules/dashboard/dashboard.component'
 import {ClassComponent} from './modules/class/class.component'
+import {EmpComponent} from './modules/employee/employee.component'
 
 @NgModule({
   imports:      [
@@ -14,7 +15,8 @@ import {ClassComponent} from './modules/class/class.component'
   declarations: [
       AppComponent,
       DashboardComponent,
-      ClassComponent
+      ClassComponent,
+      EmpComponent
   ],
   bootstrap:    [ AppComponent ]
 })
