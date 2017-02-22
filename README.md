@@ -17,7 +17,7 @@ npm install
 yarn install
 
 # Then simply start your app
-node start
+npm start
 
 # Rest Api End Point
 http://localhost:3009/employee
