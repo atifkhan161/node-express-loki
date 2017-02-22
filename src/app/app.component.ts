@@ -2,13 +2,21 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: `<h1>Hello {{name}}</h1>
-    <nav>
-      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-      <a routerLink="/class" routerLinkActive="active">Class</a>
-    </nav>
-    <router-outlet></router-outlet>`,
+    templateUrl: './app/app-view.html'
+    // template: `
+    // <md-card>
+    // Hello {{name}}
+    //   <md-toolbar>
+    //
+    //   </md-toolbar>
+    //   <router-outlet></router-outlet>
+    // </md-card>`,
 })
 export class AppComponent {
     name = 'Route Example';
+
+    navItems = [
+        {name: 'Dashboard', route: 'dashboard'},
+        {name: 'Class', route: 'class'}
+    ];
 }
