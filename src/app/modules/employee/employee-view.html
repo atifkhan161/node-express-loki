@@ -1,1 +1,8 @@
-<h1>Employees {{title}}</h1>
+<h1>Employees</h1>
+<md-card *ngFor="let emp of employees">
+    <md-list >
+        <md-icon md-list-avatar>Employee</md-icon>
+        <h4 md-line>{{emp.name}}</h4>
+        <p md-line> {{emp.id}} </p>
+    </md-list>
+</md-card>

@@ -2,7 +2,7 @@ module.exports = function (app, db) {
     var empService = require("../employee.service")(app, db);
 
     app.get('/employee', function (req, res) {
-        empService.get(emp).then(function (obj) {
+        empService.get().then(function (obj) {
             res.send(obj.data);
         });
     });
