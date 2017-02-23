@@ -12,8 +12,7 @@ export class EmpComponent implements OnInit {
     constructor(private empService: EmpService){}
 
     title = "Title loaded";
-    employees = [
-    ];
+    employees = [];
 
     ngOnInit(): void {
         this.empService.getAllEmployees().subscribe(
