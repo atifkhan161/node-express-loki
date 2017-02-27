@@ -5,5 +5,6 @@
         <md-icon md-list-avatar>Employee</md-icon>
         <h4 md-line>{{emp.name}}</h4>
         <p md-line> {{emp.id}} </p>
+        <button md-raised-button (click)="delete(emp.id)">Delete</button>
     </md-list>
 </md-card>

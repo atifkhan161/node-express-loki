@@ -15,6 +15,19 @@ export class EmpComponent implements OnInit {
     employees = [];
 
     ngOnInit(): void {
+        this.fetchData();
+    }
+
+    delete(id): void {
+        this.empService
+            .delete(id)
+            .subscribe(emp  => {
+                this.fetchData();
+            });
+        // .catch(error => this.error = error); // TODO: Display error message
+    }
+
+    fetchData() : void {
         this.empService.getAllEmployees().subscribe(
             data => this.employees = data,
         );

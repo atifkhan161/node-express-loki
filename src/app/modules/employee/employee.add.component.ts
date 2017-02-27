@@ -14,15 +14,15 @@ export class AddEmpComponent implements OnInit {
     title = "Title loaded";
 
     ngOnInit(): void {
-       this.employee = new Employee();
+       // this.employee = new Employee();
     }
 
     save(): void {
         this.empService
             .save(this.employee)
-            .subscribe(emp => {
+            .subscribe(emp  => {
                 window.history.back();
-            })
-            .catch(error => this.error = error); // TODO: Display error message
+            });
+            // .catch(error => this.error = error); // TODO: Display error message
     }
 }

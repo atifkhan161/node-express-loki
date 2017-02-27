@@ -40,12 +40,14 @@ module.exports = function (app, db) {
                 })
             });
         },
-        delete: function () {
+        delete: function (Id) {
             return new Promise(function (fulfill, reject) {
                 db.loadDatabase({}, function () {
                     try {
                         var employees = db.getCollection('employees');
-                        employees.removeDataOnly({id: req.params.id});
+                        var emp = employees.findOne({id: Id });
+                        employees.remove(emp);
+                        // employees.removeDataOnly({id: Id});
                         db.saveDatabase();
                         fulfill(employees);
                     } catch (ex) {

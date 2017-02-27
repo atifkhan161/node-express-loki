@@ -17,8 +17,9 @@ module.exports = function (app, db) {
             res.send(obj.data);
         });
     });
-    app.delete('/employee/:id', function (req, res) {
-        empService.getById(req.params.id).then(function (obj) {
+    app.delete('/employee', function (req, res) {
+        var emp = req.body;
+        empService.delete(emp.Id).then(function (obj) {
             res.send(obj.data);
         });
     });

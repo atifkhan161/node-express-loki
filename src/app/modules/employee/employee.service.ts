@@ -40,4 +40,23 @@ export class EmpService {
             }
         });
     }
+    delete(Id) {
+        let headers = new Headers({'Content-Type': 'application/json'}); // ... Set content type to JSON
+        let options = new RequestOptions({headers: headers,
+        body: {
+            "Id" : Id
+        }}); // Create a request option
+
+        return this.http.delete('http://localhost:3009/employee', options).map(res => {
+            // If request fails, throw an Error that will be caught
+            if (res.status < 200 || res.status >= 300) {
+                throw new Error('This request has failed ' + res.status);
+            }
+            // If everything went fine, return the response
+            else {
+                console.log(res.json());
+                return res.json();
+            }
+        });
+    }
 }
